@@ -1,15 +1,17 @@
+<?php $professores = $_REQUEST["professores"]; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de estudante</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Professores</title>
 </head>
-
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid text-white">
           <a class="navbar-brand" href="#">Meu site</a>
@@ -36,27 +38,34 @@
           </div>
         </div>
       </nav>
-
-
-    <div class="container">
-        <form method="POST" action="/aula3/?controller=Estudante&acao=salvar">
-            <h1 class="pb-3">Cadastrar Estudante</h1>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" >
-                
-            </div>
-            <div class="mb-3">
-                <label for="idade" class="form-label">Idade</label>
-                <input type="number" class="form-control" id="idade" name="idade">
-            </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
-            <!-- <a href="/aula3/?controller=Estudante&acao=listar"  type="submit" class="btn btn-primary">Salvar</a> -->
-        </form>
-    </div>
+    <h2 class="text-center">Semana da Acessibilidade</h2>
+    <div class="imagem col-md-6 mx-auto">
+        <img src = "acessibilidade.jpg" alt="imagem contendo desenho de pessoas portadoras de diferentes deficiências." class="mx-auto d-block img-fluid">
         
+    </div>
+    
+    <table class="table table-hover container col-md-6">
+        <h3 class="text-center pt-3">Professores</h3>
+        
+        <tr>
+            <th>#</th>
+            <th>Nome:</th>
+            <th>Idade:</th>  
+        </tr>
+        <?php foreach ($professores as $professorAtual) { ?>
+           
+           <tr>
+                <td><?php echo $professorAtual["id"]; ?></td>
+                <td><?php echo $professorAtual["nome"]; ?></td>
+                <td><?php echo $professorAtual["idade"]; ?> anos</td>
+           </tr>
+        <?php } ?>
+    </table>
+    <br class="col-md-6">
+    <a href="/aula3/?controller=Professor&acao=salvar" class="btn btn-success mx-auto d-block col-md-3">Cadastrar Professor</a>
+    </br>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

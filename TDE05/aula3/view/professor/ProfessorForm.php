@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de estudante</title>
+    <title>Cadastro de Professor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -39,8 +39,8 @@
 
 
     <div class="container">
-        <form method="POST" action="/aula3/?controller=Estudante&acao=salvar">
-            <h1 class="pb-3">Cadastrar Estudante</h1>
+        <form method="POST" action="/aula3/?controller=Professor&acao=salvar">
+            <h1 class="pb-3">Cadastrar Professor</h1>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome" >

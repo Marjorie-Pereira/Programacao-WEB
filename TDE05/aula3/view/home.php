@@ -23,7 +23,7 @@
                 <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Estudante&acao=listar">Estudantes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Estudante&acao=listar">Professores</a>
+                <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Professor&acao=listar">Professores</a>
               </li>
                 
             </ul>

@@ -27,7 +27,7 @@
                 <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Estudante&acao=listar">Estudantes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Estudante&acao=listar">Professores</a>
+                <a class="nav-link" href="/<?php echo FOLDER; ?>/?controller=Professor&acao=listar">Professores</a>
               </li>
                 
             </ul>
@@ -48,12 +48,14 @@
         <h3 class="text-center pt-3">Lista de Estudantes</h3>
         
         <tr>
+            <th>#</th>
             <th>Nome:</th>
             <th>Idade:</th>  
         </tr>
         <?php foreach ($listaEstudantes as $estudante) { ?>
            
            <tr>
+              <td><?php echo $estudante["id"]; ?></td>
                 <td><?php echo $estudante["nome"]; ?></td>
                 <td><?php echo $estudante["idade"]; ?> anos</td>
            </tr>

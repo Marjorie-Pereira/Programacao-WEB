@@ -9,9 +9,9 @@ class ProfessorController
     public function listar(){
         //Instanciar a model
         //Chamar o metodo listar na model
-        $professorModel = new EstudanteModel();
+        $professorModel = new ProfessorModel();
         $professores = $professorModel->listarModel();
-        $_REQUEST['estudantes'] = $professores;
+        $_REQUEST['professores'] = $professores;
         //Renderizar a view
         //AQUI
         require_once $_SERVER['DOCUMENT_ROOT'] . "/" . FOLDER . '/view' . self::CONTROLLER_FOLDER . '/ProfessorView.php';
@@ -26,9 +26,9 @@ class ProfessorController
         } else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $nome = $_POST['nome'];
             $idade = $_POST['idade'];
-            $professorModel = new EstudanteModel();
+            $professorModel = new ProfessorModel();
         $professorModel->salvarModel($nome, $idade);
-        header(' Location: http://localhost/' . FOLDER . '/?controller=Professor&acao=listar');
+        header('Location: http://localhost/' . FOLDER . '/?controller=Professor&acao=listar');
         exit();
         }
     }   
