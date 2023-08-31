@@ -27,9 +27,9 @@ class EstudanteController
             $nome = $_POST['nome'];
             $idade = $_POST['idade'];
             $estudanteModel = new EstudanteModel();
-        $estudanteModel->salvarModel($nome, $idade);
-        header(' Location: http://localhost/' . FOLDER . '/?controller=Estudante&acao=listar');
-        exit();
+            $estudanteModel->salvarModel($nome, $idade);
+            header('Location: http://localhost/' . FOLDER . '/?controller=Estudante&acao=listar');
+            exit();
         }
     }   
 }
