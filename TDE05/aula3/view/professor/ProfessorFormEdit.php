@@ -14,18 +14,18 @@
 
 
     <div class="container">
-        <form method="POST" action="/aula3/?controller=Professor&acao=salvar">
-            <h1 class="pb-3">Cadastrar Professor</h1>
+        <form method="POST" action="/aula3/?controller=Professor&acao=editar&id=<?php echo $professores["id"]; ?>">
+            <h1 class="pb-3">Editar Professor</h1>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" >
+                <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $professores["nome"]; ?>" >
                 
             </div>
             <div class="mb-3">
                 <label for="idade" class="form-label">Idade</label>
-                <input type="number" class="form-control" id="idade" name="idade">
+                <input type="number" class="form-control" id="idade" name="idade" value="<?php echo $professores["idade"]; ?>">
             </div>
-            <button type="submit" class="btn btn-success">Salvar</button>
+            <button type="submit" class="btn btn-success">Editar</button>
             <!-- <a href="/aula3/?controller=Estudante&acao=listar"  type="submit" class="btn btn-primary">Salvar</a> -->
         </form>
     </div>
